@@ -12,7 +12,7 @@ Pour le moment, ça ne marche que sur les Mac.
 Le mieux est d'[installer go](https://golang.org/) sur votre machine, après quoi vous pouvez ouvrir le terminal et éxécuter:
 
 ```
-go install "github.com/alixq/rdv-sante"
+go install "github.com/alixq/rdv-sante@latest"
 rdv-sante
 ```
 
@@ -39,7 +39,8 @@ ou en refaire une nouvelle.
 Pour le moment, la config est plutôt basée sur une utilisation pour trouver un RDV vaccin, même si théoriquement c'est utilisable
 pour d'autres types de recherches doctolib. Les requêtes sont relancées très régulièrement pour s'adapter à la demande énorme,
 et pour être sur de ne pas rater l'event votre Mac vous notifiera de la disponibilité d'un rendez-vous, et la fenêtre pour le réserver
-s'ouvrira.
+s'ouvrira. Aussi, seuls les rendez-vous du jour même ou du lendemain sont notifiés pour le moment car c'est la guideline officielle pour
+les 18-49 ans sans morbidité. Cela pourra être customisé à l'avenir pour être compatible avec une population plus diverse.
 
 C'est une UX absolument pourrie, mais pour le usecase vaccins, c'est nécessaire. Une version viendra pour laquelle on pourra customiser
 la manière de notifier, et la fréquence du ping.
