@@ -9,12 +9,18 @@ Pour le moment, ça ne marche que sur les Mac.
 
 # Installation
 
-Le mieux est d'[installer go](https://golang.org/) sur votre machine, après quoi vous pouvez en ouvrant le
-Terminal et en éxécutant:
+Le mieux est d'[installer go](https://golang.org/) sur votre machine, après quoi vous pouvez ouvrir le terminal et éxécuter:
 
 ```
-GO111MODULE=on go get -u "github.com/alixq/rdv-sante"
+go install "github.com/alixq/rdv-sante"
 rdv-sante
+```
+
+Pour le moment je ne gère pas très bien le versioning, si besoin d'installer la dernière version:
+
+```
+rm ~/go/bin/rdv-sante
+go install "github.com/alixq/rdv-sante@latest"
 ```
 
 # Guide
@@ -40,3 +46,7 @@ la manière de notifier, et la fréquence du ping.
 
 Autre chose: **souvent, une fenêtre va s'ouvrir et il n'y aura plus rien**. C'est comme ça, sûrement parce-que quelqu'un est
 plus malin ou plus réactif. Prenez votre mal en patience, normalement vous devriez en trouver un.
+
+Lorsque une fenêtre s'ouvre et que la voix se déclenche, le script est arrêté. Si vous n'avez pas trouvé votre bonheur ou que vous
+souhaitez réserver d'autres rendez-vous, il faut relancer. Autrement vous auriez une fenêtre qui s'ouvre par seconde et un son très
+désagréable à l'oreille.
